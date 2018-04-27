@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:>
+
+<!-- Head -->
+<head>
+
+	<title>在线机票预订系统欢迎您！</title>
+
+	<!-- Meta-Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //Meta-Tags -->
+
+	<!-- Style --> <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+
+
+
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+<body>
+
+<h1><p style="font-size: larger;font-weight: bolder; text-shadow:0 0 0.2em #fff,0 0 0.2em #000;">在线机票预订系统_TicketOrderSystem</p></h1>
+
+	<div class="container w3layouts agileits">
+
+		<div class="login w3layouts agileits">
+			<h2>登 录</h2>
+			<form action="/login.do?method=1&sign=0" method="post">
+				<input type="text" name="account" placeholder="用户名" required>
+				<input type="password" name="password" placeholder="密码" required>
+				<div class="send-button w3layouts agileits">
+					<input  type="submit" value="登 录">
+				</div>
+			</form>
+			<div >
+				<p style="text-align: center"><a href="sendMail.jsp" style="font-size: 12px;text-decoration:underline";>忘记密码？</a></p>
+			</div>
+			<div class="social-icons w3layouts agileits">
+				<p>- 其他方式登录 -</p>
+				<ul>
+					<li class="qq"><a href="#">
+					<span class="icons w3layouts agileits"></span>
+					<span class="text w3layouts agileits">QQ</span></a></li>
+					<li class="weixin w3ls"><a href="#">
+					<span class="icons w3layouts"></span>
+					<span class="text w3layouts agileits">微信</span></a></li>
+					<li class="weibo aits"><a href="#">
+					<span class="icons agileits"></span>
+					<span class="text w3layouts agileits">微博</span></a></li>
+					<div class="clear"> </div>
+				</ul>
+			</div>
+
+			<div class="clear"></div>
+		</div><div class="copyrights">Collect from <a href="#" ></a></div>
+		<div class="register w3layouts agileits">
+			<h2>注 册</h2>
+			<form action="/login.do?method=2&sign=0" method="post" >
+				<input type="text" name="name" placeholder="用户名(创建后不得修改，请谨慎操作！)" required>
+				<input type="text" name="email" placeholder="邮箱"  required id="accemail">
+				<input type="password" name="pwd" placeholder="密码" required>
+				<input type="text" name="phone" placeholder="手机号码"  required id="accphone">
+				<div class="send-button w3layouts agileits">
+					<input type="submit"  value="免费注册" onclick="validate();">
+			</div>
+				</form>
+			</div>
+			<div class="clear"></div>
+		</div>
+<script>
+    function validate()
+    {
+        var accphone = document.getElementById("accphone");
+        var accemail = document.getElementById("accemail");
+        var accname =document.getElementsById("accname");
+        if (!accemail.value == "") {
+            var reg =/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            var bool = reg.test(accemail.value);
+            if (bool == false) {
+                alert("邮箱格式错误，请重新输入！");
+                accemail.value="";
+                accemail.focus();
+                return;
+            }
+        }
+        if (!accphone.value == "") {
+            var reg1 = /^1\d{10}$/;
+            var bool1 = reg1.test(accphone.value);
+            if (bool1 == false) {
+                alert("手机格式错误，请重新输入！");
+                accphone.value = "";
+                accphone.focus();
+                return;
+            }
+        }
+
+    }
+</script>
+		<div class="clear"></div>
+
+	</div>
+
+	<div class="footer w3layouts agileits">
+		<p>Copyright &copy; <a href="#" target="_blank" title="模板之家">Airplane</a> - Collect from <a href="#" title="网页模板" target="_blank">模版之家</a></p>
+	</div>
+
+</body>
+<!-- //Body -->
+
+</html>
